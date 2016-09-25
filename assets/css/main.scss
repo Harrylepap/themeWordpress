@@ -1,0 +1,138 @@
+/* Main stylesheet for the Futurion template */
+
+
+/* --------------------------
+=== Contents ===
+0. Base Style
+	0.1 Page Frame /.frame
+1. Top menu / .top-menu
+2. main content / .main 
+	2.1 Cover / .cover
+	2.2 Content Sections /.section
+		2.2.1 Feature layout / .feature
+		2.2.2 Section content feature / .small.feature
+		2.2.3 Section background color/brightness
+		2.2.4 Button, CTA Button / .cta-button
+		2.2.5 Circle graph / .circle-graph
+		2.2.6 Owl caroussel slider / .slides , .owl-carousel
+		2.2.7 Grid items / .grid-items 
+		2.2.8 Download section buttons / .download-btns 
+		2.2.9 Price table model 1 / .price-list-table
+		2.2.10 Thank you section  /.section.thank-you
+		2.2.11 Testimony/quote you section  /.section.testimony
+		2.2.12 Partners logo grid / .picture-grid
+		2.2.13 register section / .register
+		2.2.15 faq section / .faq
+		2.2.16  Alt Price list / .price-list
+3. footer /.footer
+4. Responsiveness
+5. Helper classes
+-------------------------- */
+
+/* --------------------------
+=== Fonts and colors ===
+Main colors used by this tempalte are : 
+
+White : #fff;
+Orange : #FFAB32 ;
+Gray1 background : #f3f4f5;
+Gray2 background : #F0EFEF;
+Gray text : #737373;
+Black1 background : #111;
+Black2 background : #222;
+
+Main fonts are : "Aller" and "League Gothic"
+-------------------------- */
+
+/* 0. Base Style  */
+@import "./components/_init";
+
+@import "./components/_buttons";
+@import "./components/_mixin";
+
+
+// 1. Left menu/bar
+@import "./components/_left_bar";
+
+// 2. Main content 
+@import "./components/_main_content";  
+/* 2. main content / .main */
+.main{
+//	height: 100%;
+//	padding: 16px;
+}
+ // 2.1 Cover 
+	@import "./components/_cover";  
+ // 2.2 Page content 
+	// feature layout   (2.2.1 - 2.2.3)
+	@import "./components/_content_feature"; 
+
+	// content feature conmponents   (2.2.1 - 2.2.15)
+	@import "./components/_content_home.scss"; 
+	    
+	// alt price list (2.2.16)
+	@import "./components/_content_blog";
+
+	// team
+	@import "./components/_content_team";
+	
+	// 2.2.7 Contact section 
+	@import "./components/_content_contact"; 
+
+	// 3. footer /.footer
+@import "./components/_footer-bottom"; 
+
+/* 4. Responsiveness */ 
+@import "./components/_responsive"; 
+
+
+
+/* 5. Helper classes */
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+

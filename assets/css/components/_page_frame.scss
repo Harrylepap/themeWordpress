@@ -1,0 +1,94 @@
+
+// Decoration frame 
+$frame_border_color: rgba(0, 0, 0, 0.3);
+//$frame_border_color: rgba(0, 0, 0, 0.74);
+.frame{
+	position: fixed;
+	content: "";
+	background: #fff;
+	z-index: 10;
+	
+	.b-left{
+		float: left;
+		padding: 0.4rem 2rem;
+		
+	}
+	h3{
+		font-size: 0.8rem;
+		font-family: "Open Sans";
+		a{
+			color: inherit;
+		}
+		a:hover{
+			text-decoration: underline;
+			color: inherit;
+		}
+	}
+	.b-right{
+		float: right;
+		padding: 0.4rem 0rem;
+		h3{
+			float: left;
+		}
+	}
+	.social{
+		float: left;
+		list-style: none;
+		padding-top: 2px;
+		li{
+			float: left;
+			height: 20px;
+			border-right: 1px solid rgba(0, 0, 0, 0.74);
+			a{
+				text-transform: uppercase;
+				margin-top: -12px;
+				font-size: 1.5rem;
+				display: inline-block;
+				height: 32px;
+				width: 40px;
+				color: #222;
+				text-align: center;
+				-webkit-transition: 0.2s;
+				transition: 0.2s;
+			}
+			a:hover{
+				color: #767676;
+			}
+		}
+		li:last-child{
+			border-right: none;
+		}
+	}
+}
+.frame.t{
+	top: 0;
+	bottom: auto;
+	left: 15px;
+	right: 15px;
+	height: 16px;
+	border-bottom: 1px solid $frame_border_color;
+}
+.frame.r{
+	top: 0;
+	bottom: 0;
+	left: auto;
+	right: 0;
+	width: 16px;
+	border-left: 1px solid $frame_border_color;
+}
+.frame.l{
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: auto;
+	width: 16px;
+	border-right: 1px solid $frame_border_color;
+}
+.frame.b{
+	top: auto;
+	bottom: 0;
+	left: 15px;
+	right: 15px;
+	height: 40px;
+	border-top: 1px solid $frame_border_color;
+}

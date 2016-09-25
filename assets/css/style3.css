@@ -1,0 +1,185 @@
+/* Customisation 
+	1. BACKGROUND IMAGE
+	2. COLORS
+	3. FONTS
+*/
+
+/* 1. BACKGROUND IMAGE */
+/* Circle diagram background*/
+.circle-graph .center-illustr .circle-bg {
+	background-image: url(../img/bg_abstract_blue.png);
+}
+.section.download{
+	background: url("../img/texture_download.png");
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+.section.thank-you{
+	background: url("../img/texture_thankyou.png") , #28282A;
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+
+/* 2. COLORS */
+/* TOP MENU */
+.top-menu ul.btn-groups li a.cta:hover {
+	background: #CC4C49;
+}
+/* COVERS */
+.cover .title h2 .high {
+	color: #CC4C49;
+}
+.cover.small .title .btn-groups a {
+	border-color: #CC4C49;
+}
+.cover.small .title .btn-groups a:after {
+	background: #CC4C49;
+}
+.cover.small .title .btn-groups a {
+/*	color: #222;*/
+}
+.cover.small .title .btn-groups a:hover {
+	color: #CC4C49;
+}
+.cover .scroll-down a .highlight {
+	color: #CC4C49;
+}
+.cover .scroll-down a:hover .icon {
+	background: #CC4C49;
+}
+/* SECTIONS */
+.price-list .items .list > li .price .value,
+.feature ul.list-feature li .icon ,
+.feature .section-icon .icon ,
+.small.feature .text ul.icons-list li .illustr .icon ,
+.circle-graph .center-illustr .item .f-icon {
+	color: #CC4C49;
+	border-bottom-color: transparent;
+}
+
+.centered.feature .text h2::after {
+	background:  #CC4C49;
+}
+
+/* BUTTONS */
+.owl-carousel .owl-controls .owl-dots .owl-dot.active,
+.owl-carousel .owl-controls .owl-dots .owl-dot:hover,
+.register .form-container,
+.cta-button.alt-cta a.btn.op-cta:hover, 
+.cta-button.alt-cta a.btn {
+	border-color: #CC4C49;
+}
+/*.cta-button.alt-cta a.btn.op-cta:hover,*/
+.contact .form .button:hover,
+.owl-carousel .owl-controls .owl-dots .owl-dot.active,
+.register .form-container .button,
+.register .form-container .button:before,
+.cta-button.alt-cta a.btn.op-cta:hover:after,
+.cta-button.alt-cta a:after {
+	background: #CC4C49;
+}
+.cta-button.alt-cta a.btn.op-cta:hover{
+	color: #fff;
+}
+.register .form-container .button:hover,
+.cta-button.alt-cta a.btn.op-cta, 
+.cta-button.alt-cta a:hover {
+	color: #CC4C49;
+}
+.small.feature .text .list-feature h2.title ,
+.feature .f-grid .desc h3,
+.feature .f-grid .icon-c .icon,
+.circle-graph .center-illustr .item h3,
+.how-list .small.feature .text h2.title ,
+.feature .text h3.subtitle.alt {
+    color: #CC4C49;
+}
+.price-list .items .list > li .price a::after,
+.price-list .items .list > li .price a::before{
+	background: #CC4C49;
+}
+.price-list .items .list > li .price a.btn{
+	background: #fff;
+	color: #CC4C49;
+}
+.price-list .items .list > li .features .icons-list li .illustr .icon{
+	color: #CC4C49;
+}
+.price-list .items .list > li .price a.btn:hover{
+	background: rgba(255, 255, 255, 0.15);
+}
+/* 3. FONTS */
+
+.cover.small .title h2 ,
+.small.feature .text h2.title.big {
+	font-family: "Montserrat Hairline";
+	font-weight: 100;
+	text-transform: none;
+}
+
+.centered.feature h2 {
+	font-family: "Montserrat Hairline" !important;
+	font-weight: 100;
+}
+.feature .text h2.title {
+	text-transform: none;
+}
+
+.small.price-list .items .list > li .title h3,
+.small.price-list .items .list > li .price .value ,
+.small.price-list .items .list > li .price a.btn,
+.cover .title h2 .high {
+	font-family: "Montserrat" ;
+    font-weight: 600;
+}
+
+.small.price-list .items .list > li .price a.btn{
+	font-size: 1.2rem;
+	padding: 0.8rem 2rem;
+}
+.feature .f-grid .desc h3 ,
+.circle-graph .center-illustr .item h3 ,
+.small.feature .text h2.title {
+    font-family: "Montserrat" ;
+/*    font-weight: 100;*/
+	text-transform: none;
+}
+.section.testimony h3 ,
+.price-list-table .item .wrapper .price ,
+.price-list-table .item .wrapper h3 ,
+.grid-items ul li .text-wrapper h3,
+.small.feature .text .list-feature h2.title ,
+.feature .f-grid .desc h3,
+.feature .f-grid .icon-c .icon,
+.circle-graph .center-illustr .item h3,
+.how-list .small.feature .text h2.title  ,
+.feature .text h3.subtitle.alt {
+	font-family: "Montserrat" ;
+    font-weight: 600;
+	text-transform: none;
+}
+.small.feature-quote .text h2.title  ,
+.contact .subtitle {
+	text-transform: uppercase;
+	font-family: "Montserrat" ;
+    font-weight: 600;
+}
+.small.feature-quote .text h2.title .left-s {
+	margin-top: -0.27em;
+	
+}
+.small.price-list .items .list > li .title h3{
+/*	font-size: 1.7rem;*/
+}
+.small.feature-quote .text h3.subtitle {
+	font-family: "Montserrat Hairline" ;
+    font-weight: 100;
+	text-transform: none;
+}
+
+.contact p,
+.contact .form .input,
+.contact .form textarea,
+.contact .form label{
+/*	font-family: "Montserrat";*/
+}

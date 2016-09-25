@@ -1,0 +1,30 @@
+/*OpenSans Font*/
+@font-face {
+    font-family: 'League Gothic';
+    src: url('LeagueGothic-Regular.otf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'League Gothic';
+    src: url('LeagueGothic-CondensedRegular.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'League Gothic';
+    src: url('LeagueGothic-Italic.otf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'League Gothic';
+    src: url('LeagueGothic-CondensedItalic.otf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+

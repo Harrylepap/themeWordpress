@@ -1,0 +1,78 @@
+@import "variables";
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* MIXINS */
+
+/* Recents news color */
+@mixin newslist_item($color: $color1 , $type : "bordered") {
+	@if($type == "bordered"){
+		.l-wrapper{
+			box-shadow: inset 0 0 0 3px $color;
+			background: none;
+		}
+		h4{
+			color: $color;
+		}
+		.detail{
+			p{
+				color: $color;
+			}
+		}
+		p{
+			color: #343434;
+		}
+		.btn{
+			background: $color;
+			color: #fff;
+		}
+		.btn:hover{
+			background: $color - #28262b;
+		}
+	}
+	@else if($type == "fill"){
+		.l-wrapper{
+			box-shadow: none;
+			background: $color;
+		}
+		h4{
+			color: #fff;
+		}
+		.detail{
+			p{
+				color: #fff;
+			}
+		}
+		p{
+			color: #fff;
+		}
+		.btn{
+			background: #fff;
+			color: $color;
+		}
+		.btn:hover{
+			background: #fff - #28262b;
+		}
+	}
+	
+}

@@ -1,0 +1,202 @@
+/* Customisation 
+	1. BACKGROUND IMAGE
+	2. COLORS
+	3. FONTS
+*/
+
+/* 1. BACKGROUND IMAGE */
+/* Circle diagram background*/
+.circle-graph .center-illustr .circle-bg {
+	background-image: url(../img/bg_abstract_blue.png);
+}
+.section.download{
+	background: url("../img/texture_download.png");
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+
+/* 2. COLORS */
+/* TOP MENU */
+.top-menu ul.btn-groups li a.cta:hover {
+	background: #A7905C;
+}
+/* COVERS */
+.cover .title h2 .high {
+	color: #A7905C;
+}
+.cover.small .title .btn-groups a {
+	border-color: #A7905C;
+}
+.cover.small .title .btn-groups a:after {
+	background: #A7905C;
+}
+.cover.small .title .btn-groups a {
+/*	color: #222;*/
+}
+.cover.small .title .btn-groups a:hover {
+	color: #A7905C;
+}
+.cover .scroll-down a .highlight {
+	color: #A7905C;
+}
+.cover .scroll-down a:hover .icon {
+	background: #A7905C;
+}
+/* SECTIONS */
+.feature ul.list-feature li .icon ,
+.feature .section-icon .icon ,
+.small.feature .text ul.icons-list li .illustr .icon ,
+.circle-graph .center-illustr .item .f-icon {
+	color: #A7905C;
+}
+.centered.feature .text h2::after {
+	background:  #A7905C;
+}
+/* BUTTONS */
+.owl-carousel .owl-controls .owl-dots .owl-dot.active,
+.owl-carousel .owl-controls .owl-dots .owl-dot:hover,
+.register .form-container,
+.cta-button.alt-cta a.btn.op-cta:hover, 
+.cta-button.alt-cta a.btn {
+	border-color: #A7905C;
+}
+/*.cta-button.alt-cta a.btn.op-cta:hover,*/
+.contact .form .button:hover,
+.owl-carousel .owl-controls .owl-dots .owl-dot.active,
+.register .form-container .button,
+.register .form-container .button:before,
+.cta-button.alt-cta a.btn.op-cta:hover:after,
+.cta-button.alt-cta a:after {
+	background: #A7905C;
+}
+.cta-button.alt-cta a.btn.op-cta:hover{
+	color: #fff;
+}
+
+.register .form-container .button:hover,
+.cta-button.alt-cta a.btn.op-cta, 
+.cta-button.alt-cta a:hover {
+	color: #A7905C;
+}
+.small.feature .text .list-feature h2.title ,
+.feature .f-grid .desc h3,
+.feature .f-grid .icon-c .icon,
+.circle-graph .center-illustr .item h3,
+.how-list .small.feature .text h2.title ,
+.feature .text h3.subtitle.alt {
+    color: #A7905C;
+}
+.price-list .items .list > li .price a::after,
+.price-list .items .list > li .price a::before{
+	background: #A7905C;
+}
+.price-list .items .list > li .price a.btn{
+	background: #fff;
+	color: #A7905C;
+}
+.price-list .items .list > li .price .value ,
+.price-list .items .list > li .features .icons-list li .illustr .icon{
+	color: #A7905C;
+}
+.price-list .items .list > li .price a.btn:hover{
+	background: rgba(255, 255, 255, 0.15);
+}
+/* 3. FONTS */
+
+.cover.small .title h2 ,
+.small.feature .text h2.title.big {
+	font-family: "Playfair Display";
+}
+
+.centered.feature h2 {
+	font-family: "Playfair Display" !important;
+}
+.feature .text h2.title {
+	text-transform: none;
+	
+	font-weight: 900;
+}
+.small.price-list .items .list > li .title h3,
+.small.price-list .items .list > li .price .value ,
+.cover .title h2 .high {
+	font-family: "Playfair Display";
+}
+.small.price-list .items .list > li .price a.btn{
+	font-family: "Playfair Display";
+	padding-top: 0.65rem;
+	font-weight: 900;
+}
+.feature .f-grid .desc h3 ,
+.circle-graph .center-illustr .item h3 ,
+.small.feature .text h2.title {
+    font-family: "Playfair Display";
+/*    font-weight: 100;*/
+	text-transform: none;
+}
+.section.testimony h3 ,
+.price-list-table .item .wrapper .price ,
+.price-list-table .item .wrapper h3 ,
+.grid-items ul li .text-wrapper h3{
+	font-family: "Playfair Display";
+	text-transform: none;
+	font-weight: 500;
+}
+.small.feature .text .list-feature h2.title ,
+.feature .f-grid .desc h3,
+.feature .f-grid .icon-c .icon,
+.circle-graph .center-illustr .item h3,
+.how-list .small.feature .text h2.title  ,
+.feature .text h3.subtitle.alt {
+	font-family: "Playfair Display";
+	text-transform: none;
+	font-weight: 500;
+}
+.small.feature-quote .text h2.title  ,
+.contact .subtitle {
+	text-transform: uppercase;
+	font-family: "Playfair Display";
+}
+.small.feature-quote .text h2.title .left-s {
+	margin-top: -0.22em;
+}
+
+.small.feature-quote .text h3.subtitle {
+	font-family: "Playfair Display";
+    font-weight: 500;
+	text-transform: none;
+}
+.section.testimony h4,
+.price-list-table .item .wrapper .features li {
+	font-family: "Roboto";
+    font-weight: 300;
+}
+.cover .title .bubble p ,
+.grid-items ul li .text-wrapper p ,
+.small.feature .text ul, 
+.small.price-list .items .list > li .features p,
+.small.price-list .items .list > li .features .features-list li ,
+.small.feature .text p {
+/*    font-family: "Open Sans";*/
+    font-family: "Roboto";
+    font-weight: 300;
+    letter-spacing: 0.08rem;
+	line-height: 2;
+}
+.contact .form .button{
+	font-size: 1rem;
+	font-family: "Open Sans";
+}
+.contact p,
+.contact .form .input,
+.contact .form textarea,
+.contact .form label{
+	font-family: "Roboto";
+}
+.cover.small .title h3 ,
+.cover.small .scroll-down ,
+/*.top-menu ul.btn-groups li a ,*/
+.frame h3 {
+	font-family: "Roboto";
+    font-weight: 300;
+    letter-spacing: 0.08rem;
+}

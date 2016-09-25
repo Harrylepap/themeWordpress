@@ -1,0 +1,409 @@
+$text-size : 1.4rem;
+$right-margin : 280px;
+$global-padding : 36px;
+$left-margin : 280px + 36px;
+//$header-height : 124px;
+$header-height : 140px;
+
+$color1 : #49a947;
+//$color1 : #0A5794;
+
+$text-font : "Segoe WP", "Roboto";
+
+.wow:first-child {
+	// UNCOMMENT THIS 
+  visibility: hidden; 
+}
+.main{
+	padding-left: $left-margin;
+	position: relative;
+//		background: #f4f;
+	.section{
+		padding-right: $right-margin;
+		padding-left: $global-padding * 2;
+		position: relative;
+		h2.title{
+			font-family: "Glacial Indifference";
+//				font-family: "Playfair Display";
+			color: #fff;
+			font-weight: bold;
+			font-size: 36px;	
+//				background: $color1;
+			/*background: rgba(255, 255, 255, 0.3);
+			padding-top: 16px;
+			padding-bottom: 16px;
+			padding-left: 16px;
+			padding-right: 16px;
+			margin-left: -16px;*/
+		}
+	}
+	.section.framed{
+		h2.title{
+//				background: $color1;
+//				background: rgba(255, 255, 255, 0.3);
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			border-top: none;
+			padding-top: 16px;
+			padding-bottom: 16px;
+			padding-left: 36px;
+			padding-right: 36px;
+			margin-left: -36px;
+		}
+	}
+
+	.section.framed:before{
+		position: absolute;
+		content: "";
+//			top: $global-padding *2 ;
+		top:  $header-height + 1px ;
+		left: $global-padding ;
+		right: $global-padding ;
+		bottom: $global-padding ;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+}
+.right-panel{
+	position: absolute;
+//	right:  - $right-margin;
+	right: 0;
+	width: $right-margin;
+	top: 0;
+}
+
+/* Screen small than 1200px */
+@media (max-height : 800px){
+	.h-top{
+		.buzz-list{
+			ul{
+//				li:nth-child(4),
+				li:nth-child(5),
+				li:nth-child(6){
+					display: none;
+				}
+			}
+		}
+	}
+}
+.buzz-list{
+//	position: absolute;
+//	right: 0;
+//	top: 0;
+//	bottom: auto;
+//	left: auto;
+//	display: block;
+	ul.recent-list{
+//		padding: 36px;
+//		margin-left: -72px;
+	}
+	ul{
+		li{
+			width: $right-margin;
+			height: $right-margin / 2;
+			display: block;
+			background: rgba(39, 39, 39, 0.33);
+			background: rgba(255, 255, 255, 0.1);
+//			min-height: 192px;
+//			background: #f4f;
+//			padding: 32px $global-padding;
+			padding-bottom: 0;
+//			.l-wrapper{
+				height: $right-margin / 2;
+//				background: #999;
+//				background: #fff;
+//				background: none;
+//				box-sizing: content-box;
+//							border: 10px solid $color1;
+//				box-shadow: inset 0 0 0 3px $color1;
+				padding: 32px $global-padding;
+				padding-bottom: 0;
+				position: relative;
+				
+//			}
+			.date{
+				position: absolute;
+				bottom: 11px;
+				right: 18px;
+				p{
+					margin: 0;
+					color: $color1;
+					font-family:$text-font;
+					font-size: 12px;
+					font-weight: normal;
+				}
+			}
+			.img{
+				content: "";
+				width:  3 *($global-padding);
+				height: 3 *($global-padding);
+				background: #999;
+				content: "";
+				float: left;
+				margin-left: -2 * ($global-padding);
+				margin-right: 0.5 * ($global-padding);
+				margin-top: -8px;
+				border-radius: 0px;
+//				box-shadow: inset 0 0 0 3px $color1;
+				box-shadow:  0 3px 10px rgba(0,0,0,0.2);
+//				margin-bottom: 0.5 * ($global-padding);
+			}
+			h4{
+				font-family: "Glacial Indifference";
+				color: #fff;
+				font-weight: bold;
+				font-size: 16px;
+				text-transform: uppercase;
+				margin-top: -8px;
+				display: block;
+				margin-right: -18px;
+			}
+			p{
+				font-family: $text-font;
+				color: #fff;
+				font-size: 13px;
+//				line-height: 1.2;
+				display: block;
+				font-weight: 300;
+			}
+			.btn{
+				@extend .cta-btn;
+				position: absolute !important;
+				bottom: 0;
+				right: 0;
+				background: rgba(255, 255, 255, 0);
+			}
+		}
+		li:nth-of-type(2n){
+			background: rgba(255, 255, 255, 0.3);
+		}
+	}
+}
+
+.search-bar{
+	width: 100%;
+	height: $header-height;
+//	height: $global-padding * 3;
+	background: #f0f0f0;
+	padding: 51px $global-padding;
+//	padding: $global-padding;
+	position: relative;
+	form{
+		position: relative;
+		
+		input{
+			background: $color1 !important;
+			box-shadow: none;
+			border: none;
+			border-radius: 2px;
+			height: $global-padding;
+			color: #fff;
+			padding-right: 48px;
+		}
+		label{
+			display: block;
+			font-size: 12px;
+			color: $color1;
+			font-family: $text-font;
+			position: absolute;
+			top: -2em;
+		}
+		button{
+			position: absolute;
+			right: 0;
+			top: 0;
+			left: auto;
+			height: $global-padding;
+			padding: 0 16px;
+			line-height: 1;
+			color: #fff;
+			font-size: 22px;
+			background: $color1;
+			background: rgba(255,255,255,0);
+			transition: 0.3s;
+		}
+		button:hover{
+			background: rgba(255,255,255,0.2);
+		}
+	}
+}
+
+.scroll{
+	position: absolute;
+	right: $global-padding;
+	left: auto;
+	top: auto;
+	bottom: 16px;
+	display: block;
+	a{
+		color: #fff;
+		font-size: 12px;
+		font-family: $text-font;
+		font-style: italic;
+		position: relative;
+		padding-right: 48px;
+	}
+	a:before,
+	a:after{
+		position: absolute;
+		left: auto;
+		right: 14px;
+		top: -18px;
+		content: "\f3d0";
+		font-size: 36px;
+		font-family: "Ionicons";
+		font-style: normal;
+		color: $color1;
+		font-weight: 100;
+		transition: 0.3s;
+		opacity: 1;
+	}
+	a.right-arrow:before,
+	a.right-arrow:after{
+		content: "\f3d3";
+	}
+	a:before{
+		opacity: 0;
+	}
+	a:hover:after{
+		top: -22px;
+	}
+	a:hover:before{
+		top: -14px;
+		opacity: 1;
+	}
+	a.right-arrow:hover:after{
+		top: -18px;
+		right: 18px;
+	}
+	a.right-arrow:hover:before{
+		top: -18px;
+		right: 10px;
+		opacity: 1;
+	}
+}
+
+footer.p-footer{
+	background: $color1;
+	background: #fff;
+	height: 108px;
+    padding: 16px 36px;
+	position: relative;
+	margin-left: $left-margin;
+	p{
+		margin: 0;
+		font-size: 12px;
+		font-family: $text-font;
+		color: #343434;
+	}
+	.item{
+		position: relative;
+		h5{
+			font-family: "Glacial Indifference";
+			font-size: 16px;
+			text-transform: uppercase;
+			color: $color1;
+			font-weight: bold;
+		}
+	}
+	.item:before{
+		content: "";
+		position: absolute;
+		background: rgba(52, 52, 52, 0.31);
+		top: 16px;
+		height: 40px;
+		left: -36px;
+		width: 1px;
+	}
+	.f-social{
+		li{
+			float: left;
+			position: relative;
+			a{
+				color: #1a1a1a;
+				font-size: 24px;
+				display: block;
+				width: 24px;
+				height: 24px;
+				line-height: 1;
+				padding-right: 16px;
+				position: relative;
+//				background: #f4f;
+				.screen-reader-text{
+					clip: rect(1px, 1px, 1px, 1px);
+					height: 1px;
+					overflow: hidden;
+					position: absolute !important;
+					width: 1px;
+				}
+			}
+			
+			a:hover{
+				color: $color1;
+			}
+			a:before {
+				font-family: "Ionicons";
+				content: "\f1fe";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				display: block;
+				right: 0;
+				text-align: center;
+				padding-right: 16px;
+			}
+			a[href*="facebook"]:before {
+				content: "\f231";
+			}
+			a[href*="twitter"]:before {
+				content: "\f243";
+			}
+			a[href*="instagram"]:before {
+				content: "\f350";
+			}
+			a[href*="youtube"]:before {
+				content: "\f24d";
+			}
+			a[href*="google"]:before {
+				content: "\f235";
+			}
+			a[href*="pinterest"]:before {
+				content: "\f2b1";
+			}
+			a[href*="tumblr"]:before {
+				content: "\f241";
+			}
+			a[href*="linkedin"]:before {
+				content: "\f239";
+			}
+		}
+	}
+	.f-links{
+		margin: 0;
+		font-size: 12px;
+		font-family: $text-font;
+		color: #343434;
+		li{
+			list-style: square ;
+			float: left;
+			width: 50%;
+			a{
+				color: #1a1a1a;
+				display: inline-block;
+			}
+			a:hover{
+				color: $color1;
+			}
+			
+		}
+	}
+	.notice{
+		text-align: right;
+		padding-top: 10px;
+		a{
+			color: $color1;
+			display: inline-block;
+		}
+		a:hover{
+			color: #1a1a1a;
+		}
+	}
+}

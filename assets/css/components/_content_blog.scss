@@ -1,0 +1,564 @@
+$right-margin : 280px;
+$global-padding : 36px;
+$left-margin : 280px + 36px;
+//$header-height : 124px;
+$header-height : 140px;
+$color1 : #49a947;
+//$color2 : #9b7061;
+//$color2 : #795548;
+$color2 : #fb6365;
+//$color2 : #49a947;
+
+$color3 : #f01447;
+$color4 : #6523fe;
+$color5 : #fe9023;
+$color6 : #2366fe;
+
+$text-font : "Segoe WP", "Roboto";
+
+@import "mixin";
+
+.blog{
+	.header-top{
+		position: absolute;
+		top: 0;
+		left: $left-margin;
+		right: $right-margin;
+		z-index: 10;
+		padding: $global-padding;
+		.user-tool{
+			position: relative;
+			float: right;
+			font-size: 16px;
+			line-height: 1;
+			.btn,
+			.name{
+				font-family: "Glacial Indifference";
+				font-weight: bold;
+				color: #999;
+				float: left;
+				padding-left: 18px;
+				padding-right: 18px;
+				position: relative;
+				a{
+					color: $color1;
+				}
+			}
+			.avatar{
+				float: left;
+				position: relative;
+				img{
+					width: 36px;
+					height: 36px;
+					display: block;
+					margin-top: -11px;
+					border-radius: 100%;
+				}
+				.icon{
+					font-size: 36px;
+					display: block;
+					width: 30px;
+					margin-top: -11px;
+				}
+			}
+			.name:before{
+				content: "";
+//				background: currentColor;
+				background: #999;
+				position: absolute;
+				width: 2px;
+				height: 1em;
+				left: -1px;
+				top: 0;
+			}
+		}
+		
+		ul{
+			margin-left: -16px;
+			li{
+				display: block;
+				float: left;
+				padding: 0 16px;
+				line-height: 1;
+				position: relative;
+				font-family: "Glacial Indifference";
+				font-weight: bold;
+				color: #999;
+				a{
+					color: inherit;
+				}
+			}
+			li:before{
+				content: "";
+//				background: currentColor;
+				background: #999;
+				position: absolute;
+				width: 2px;
+				height: 1em;
+				left: -1px;
+				top: 0;
+			}
+			li:first-child:before{
+				display: none;
+			}
+			li.active{
+				color: #1a1a1a;
+			}
+		}
+	}
+	
+	.content{
+		.section{
+			padding-right: 0;
+		}
+	}
+	
+	.b-article{
+		padding-top: $header-height;
+		margin-right: $right-margin;
+		position: relative;
+		background: #f7f8f9;
+		background: #faf9f7;
+//		background: #F7F6F3;
+		padding-bottom: $global-padding;
+		
+		.search-bar{
+			position: fixed;
+			width: $right-margin;
+			z-index: 10;
+			top: 0;
+		}
+		.scroll{
+			right: $global-padding - $right-margin;
+		}
+		.right-panel{
+			position: absolute;
+			right:  - $right-margin;
+			width: $right-margin;
+			top: $header-height;
+//			top: 0;
+//			background: #f4f;
+		}
+		.s-content{
+			
+				max-width: 960px;
+//				margin: auto;
+			margin-left: auto;
+			h2.title{
+				color: #1a1a1a;
+				font-size: 60px;  
+				font-size: 48px;
+    			line-height: 1.4;
+//				line-height: 1;
+				padding-right:  $global-padding  ;
+//				max-width: 480px;
+				max-width: 700px;
+				padding-bottom: $global-padding / 1;
+			}
+			.illustr{
+				width: 100%;
+				height: $global-padding * 8 ;
+				display: block;
+				overflow-y: hidden;
+				img{
+					width: 100%;
+				}
+				.cover{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.author{
+				margin-top: $global-padding  ;
+				margin-bottom: $global-padding  ;
+				position: relative;
+				padding-top: 8px;
+				height: $global-padding * 1.5 ;
+				.avatar{
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: $global-padding * 1.5 ;
+					height: $global-padding * 1.5 ;
+					img{
+						width: 100%;
+						height: 100%;
+						border-radius: 100%;
+					}
+				}
+				.name,
+				.sub{
+					margin-left: $global-padding * 2;
+					line-height: 1;
+					color: #999;
+					color: #999;
+					font-family:$text-font;
+					font-size: 14px;
+//					margin-bottom: 8px;
+				}
+				.name{
+					margin-bottom: 8px;
+					color: #1a1a1a;
+					font-family: "Glacial Indifference";
+					font-weight: bold;
+				}
+				.date{
+					color: $color1;
+				}
+				.date:before{
+					content: " - "
+				}
+			}
+			.article{
+//				border-top: 1px solid  $color1;
+				border-top: 1px solid  #ddd;
+				padding-top: 18px;
+				margin-right:  $global-padding * 2 ;
+				max-width: 700px;
+				color: #343434;
+				font-family:$text-font;
+				font-size: 16px;
+				position: relative;
+//				letter-spacing: 1px;
+				ul{
+					li{
+						position: relative;
+						padding-left: 18px;
+						margin-bottom: 9px;
+						display: block;
+					}
+					li:before{
+//						position: relative;
+						left: 16px;
+						right: auto;
+						top: -2px;
+						content: "\f3d3";
+						font-size: 18px;
+						font-family: "Ionicons";
+						font-weight: 100;
+						color: $color1;
+						display: inline-block;
+						margin-right: 16px;
+					}
+					margin-bottom: 18px;
+				}
+				a{
+					color: $color1;
+				}
+				a:hover{
+					color: $color1 - #28262b;
+				}
+				h2{
+					color: #343434;
+					margin-top: 36px;
+					font-size: 24px;
+					font-family: "Glacial Indifference";
+					font-weight: bold;
+					a{
+						color: inherit;
+					}
+				}
+				img{
+					width: 100%;
+					margin: auto;
+					margin-bottom: 18px;
+					display: block;
+				}
+				p {
+					padding-bottom: 18px;
+				}
+				p:last-child{
+					padding-bottom: 0;
+				}
+			}
+		}
+		
+		.s-comment{
+			padding-right: $global-padding * 2;
+			margin-top: $global-padding;
+			max-width: 960px;
+    		margin-left: auto;
+			.comment-respond{
+				max-width: 700px;
+				border-top: 1px solid #eee;
+				padding-top: 36px;
+				margin-top: 36px;
+				h3.comment-reply-title{
+					position: relative;
+					font-family: "Glacial Indifference";
+					font-weight: bold;
+					color: #999;
+					font-size: 16px;
+				}
+			}
+			textarea{
+				background: #fff;
+				box-shadow: none;
+				font-size: 16px;
+				font-family:$text-font;
+				color: #343434;
+				border-width: 2px;
+    			border-radius: 5px;
+				border-color: #eee;
+				padding:  4px $global-padding/2;
+			}
+			p{
+				font-size: 12px;
+				font-family:$text-font;
+				color: #9E9E9E;
+				margin-bottom: 9px;
+			}
+			.comment-form{
+				input[type="submit"] {
+//					width: 100%;
+					@extend .cta-btn;
+					font-size: 16px;
+					box-shadow: none;
+					border: none;
+					padding-right: 16px;
+				}
+				.btn-cancel{
+					@extend .cta-btn-alt;
+					display: inline-block;
+					font-size: 16px;
+					padding-right: 16px;
+				}
+				.btn-cancel:after{
+					display: none;
+				}
+			}
+			.comment-form-padder{
+//				border: 1px solid #ddd;
+				border: 2px solid #eee;
+				padding:  18px $global-padding/2 ;
+				background: #fff;
+//				padding-left: $global-padding *2.5 ;
+				border-radius: 5px;
+				position: relative;
+				.comment-form-avatar{
+					position: absolute;
+					left: 0;
+					top: 0;
+					img{
+						width: $global-padding *1.5 ;
+						height: $global-padding *1.5 ;
+						border-radius: 100%;
+						display: none;
+					}
+				}
+				label{
+					font-size: 12px;
+					font-family:$text-font;
+					color: #9E9E9E;
+//					font-weight: bold;
+					text-transform: uppercase;
+				}
+				input{
+//					background: #fff;
+					background: none;
+					box-shadow: none;
+					font-size: 14px;
+					font-family:$text-font;
+					color: #343434;
+					border-width: 2px;
+//					border-radius: 5px;
+					border-color: #eee;
+					border-top: none;
+					border-left: none;
+					border-right: none;
+					margin: 0;
+				}
+			}
+		}
+	}
+	
+	.b-recents{
+		@extend .b-article;
+		
+		.right-panel{
+//			position: absolute;
+//			right:  - $right-margin;
+//			width: $right-margin;
+			top: 0;
+//			background: #f4f;
+			.r-title{
+				height: $right-margin;
+//				background: #ff4;
+				padding-top: $global-padding *2;
+				padding-right: $global-padding;
+				position: relative;
+				h2{
+					margin: 0;
+					font-family: "Glacial Indifference";
+					color: #fff;
+					font-weight: bold;
+					font-size: 24px;
+					letter-spacing: 5px;
+					line-height: 1;
+					text-transform: uppercase;
+					text-align: right;
+				}
+				.r-img{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					img{
+						margin-left: -50%;
+						width: auto;
+						height: $right-margin / 2 ;
+					}
+					.bg-img{
+						height: $right-margin / 2 ;
+						width: $right-margin;
+						margin-left: -50%;
+					}
+				}
+			}
+			.r-quote {
+				background: #1a1a1a;
+				height: $right-margin;
+				padding: $global-padding;
+				.name{
+					h4{
+						font-family: "Glacial Indifference";
+						color: $color2;
+						font-size: 24px;
+						font-weight: bold;
+						margin-top: 0;
+					}
+				}
+				cite{
+					color: #fff;
+					font-size: 16px;
+				}
+				cite:before{
+					content: "\00ab  ";
+//					color: $color1;
+					color: $color2;
+				}
+				cite:after{
+					content: " \00bb";
+					color: $color2;
+				}
+				p{
+					color: $color2;
+					text-align: right;
+					font-size: 16px;
+					font-style: italic;
+					font-weight: bold;
+				}
+			}
+		}
+		
+		.s-content{
+			max-width: 960px;
+    		margin-left: auto;
+			position: relative;
+			.post-list{
+				max-width: 700px;
+				margin-right: 72px;
+				ul{
+					@extend .clearfix;
+					$list-margin : 18px;
+					margin  : - $list-margin ;
+					
+					li{
+						width: 50%;
+						float: left;
+						display: block;
+						padding: $list-margin ;
+			//			background: #f4f;
+						.l-wrapper{
+							background: #999;
+							background: #fff;
+							background: none;
+							box-sizing: content-box;
+//							border: 10px solid $color1;
+							box-shadow: inset 0 0 0 3px $color1;
+							padding: 32px $global-padding;
+							padding-bottom: 0;
+							position: relative;
+						}
+						.detail{
+							position: absolute;
+							bottom: 11px;
+							right: 18px;
+							p{
+								margin: 0;
+								color: $color1;
+								font-family:$text-font;
+								font-size: 12px;
+								font-weight: normal;
+								.icon-categorie{
+									font-size: 20px;
+									padding-left: 6px;
+									vertical-align: baseline;
+								}
+							}
+						}
+						.img{
+							content: "";
+							width:  3 *($global-padding);
+							height: 3 *($global-padding);
+							background: #999;
+							content: "";
+							float: left;
+							margin-left: -1.5 * ($global-padding);
+							margin-right: 0.5 * ($global-padding);
+							margin-bottom: 0.5 * ($global-padding);
+						}
+						h4{
+							font-family: "Glacial Indifference";
+//							color: #343434;
+							color: $color1;
+							font-weight: bold;
+							font-size: 18px;
+							margin-top: -8px;
+							text-transform: uppercase;
+							display: block;
+						}
+						p{
+							font-family:$text-font;
+							color: #343434;
+							font-size: 16px;
+			//				line-height: 1.2;
+							display: block;
+							font-weight: normal;
+						}
+						.btn{
+							@extend .cta-btn;
+						}
+					}
+					li:nth-of-type(2n){
+						float: right;
+//						background: rgba(255, 255, 255, 0.3);
+					}
+					
+					li:nth-of-type(n){
+						@include newslist_item($color1, "fill");
+					}
+					li:nth-of-type(2n){
+						@include newslist_item($color3, "fill");
+					}
+					li:nth-of-type(3n){
+						@include newslist_item($color4 , "fill");
+					}
+					li:nth-of-type(4n){
+						@include newslist_item($color5, "fill");
+					}
+				}
+			}
+		}
+		
+		.s-content:before{
+			position: absolute;
+			content: "";
+			top: -$header-height;
+			right: 0;
+			height: 1px;
+			max-width: 960px;
+			width: 100%;
+			background: $color1;
+		}
+	}
+}

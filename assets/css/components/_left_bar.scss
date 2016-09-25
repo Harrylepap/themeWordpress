@@ -1,0 +1,276 @@
+$color1 : #49a947;
+//$color1 : #0A5794;
+//$header-height : 124px;
+$header-height : 140px;
+
+$text-font : "Segoe WP", "Roboto";
+//$p : 1;
+/* 1. Top menu / .top-menu */
+
+.header-left{
+	$h-left-width : 280px;
+	$h-left-padding : 36px;
+	$logo-height: $header-height ;
+	position: fixed;
+	top: 0;
+	left: $h-left-padding;
+	bottom: 0;
+	width: $h-left-width;
+	z-index: 100;
+//	background: $color1;
+	background: transparentize($color1, 0.1);;
+	background: rgba(146, 146, 146, 0.43);
+//	background: rgba(73, 169, 71, 0.9);
+	
+	.logo{
+		background: #fff;
+		padding: $h-left-padding;
+		padding-top: ($header-height - 124px) /2;
+		padding-bottom: $h-left-padding - 8px;
+		display: block;
+		height: $logo-height;
+		.img-title{
+//			width: 88px;
+			$img-width : 76px;
+			display: block;
+			border-bottom: 3px solid $color1;
+			img{
+				display: block;
+				float: left;
+				width: $img-width;
+				height: $img-width;
+			}
+			.title{
+				display: block;
+				float: right;
+				width: $h-left-width - (2 * $h-left-padding) - $img-width;
+//				background: #ff4;
+				padding-left: 10px;
+				padding-top: 30px;
+				padding-right: 50%;
+				font-family: "Glacial Indifference";
+				color: #343434;
+				font-weight: bold;
+				font-size: 16px;
+				text-transform: uppercase;
+				line-height: 0.9;
+				letter-spacing: 1px;
+			}
+		}
+		.desc{
+			color: #919191;
+			text-transform: lowercase;
+			font-family: "Glacial Indifference";
+			font-size: 14px;
+			letter-spacing: 4.1px;
+			display: block;
+			margin-right: -14px;
+			margin-bottom: -4px;
+		}
+	}
+	
+	.left-menu{
+		padding: $h-left-padding;
+		padding-top: $h-left-padding - 16px;
+		
+		.menu-list{
+			li{
+				font-family: "Glacial Indifference";
+				font-weight: bold;
+				text-transform: uppercase;
+				letter-spacing: -0px;
+				position: relative;
+				font-size: 16px;
+				
+				transition: 0.3s;
+				a{
+					color: #fff;
+					display: block;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+					padding: 8px 0;
+					@media screen and (max-height : 640px) {
+						padding: 4px 0;
+					}
+				}
+				ul{
+					position: fixed;
+					display: block;
+//					background: #79d178 - $color1;
+					background: #1a1a1a;
+					left: $h-left-width + $h-left-padding ;
+//					top: $logo-height;
+					top: 0;
+					bottom: 0;
+//					bottom: 108px;
+					padding: $h-left-padding;
+					padding-top: $h-left-padding - 16px +  $logo-height;
+					width: $h-left-width;
+					margin: 0;
+					visibility: hidden;
+					opacity: 0;
+//					transform: rotateY(10deg);
+					transition: 0.3s;
+				}
+				ul:after{
+					position: absolute;
+					content: "";
+					left: -$h-left-padding;
+					width: $h-left-padding;
+					top: 0;
+					bottom: 0;
+				}
+			}
+			li:before,
+			li:after{
+				position: absolute;
+				left: auto;
+				right: 0;
+				top: 6px;
+				@media screen and (max-height : 640px) {
+					top: 2px;
+				}	
+				content: "\f3d3";
+				font-size: 18px;
+				font-family: "Ionicons";
+				color: #fff;
+				font-weight: 100;
+				transition: 0.3s;
+				opacity: 1;
+			}
+			li:after{
+				left: 40px;
+				opacity: 0;
+			}
+			li:hover:after{
+				right: auto;
+				left: 0;
+				opacity: 1;
+			}
+			li:hover{
+				padding-left: 16px;
+				ul{
+					visibility: visible;
+					opacity: 1;
+					transform: none;
+				}
+			}
+		}
+	}
+	
+	.left-footer{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: auto;
+		height: 108px;
+		background: #fff;
+		padding: ($h-left-padding - 8px) $h-left-padding ;
+		
+		.notice{
+			position: absolute;
+			bottom: 0px;
+			left: -10px;
+			-webkit-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+			-webkit-transform-origin: left;
+			transform-origin: left;
+			p{
+				color: #fff;
+				font-family: $text-font;
+				font-size: 10px;
+			}
+		}
+		.f-social{
+			top: -60px;
+			position: absolute;
+			li{
+				display: inline-block;
+				a{
+					color: #fff;
+					background: #fff;
+					display: block;
+					border-radius: 2px;
+					color: $color1;
+					width: 1.3em;
+					height: 1.3em;
+					font-size: 20px;
+					padding-top: 0px;
+					line-height: 1.4;
+					text-align: center;
+					position: relative;
+					.screen-reader-text{
+						clip: rect(1px, 1px, 1px, 1px);
+						height: 1px;
+						overflow: hidden;
+						position: absolute !important;
+						width: 1px;
+					}
+				}
+				a:before {
+					font-family: "Ionicons";
+					content: "\f1fe";
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					display: block;
+					right: 0;
+					text-align: center;
+				}
+				a[href*="facebook"]:before {
+					content: "\f231";
+				}
+				a[href*="twitter"]:before {
+					content: "\f243";
+				}
+				a[href*="instagram"]:before {
+					content: "\f350";
+				}
+				a[href*="youtube"]:before {
+					content: "\f24d";
+				}
+				a[href*="google"]:before {
+					content: "\f235";
+				}
+				a[href*="pinterest"]:before {
+					content: "\f2b1";
+				}
+				a[href*="tumblr"]:before {
+					content: "\f241";
+				}
+				a[href*="linkedin"]:before {
+					content: "\f239";
+				}
+			}
+		}
+		.f-contact{
+			li{
+				display: block;
+				font-family: $text-font;
+				font-size: 12px;
+				margin-top: 8px;
+				a{
+					color: #343434;
+					.icon{
+						color: $color1;
+						font-size: 24px;
+						padding-right: 8px;
+						line-height: 1;
+						vertical-align: middle;
+						display: inline-block;
+						margin-top: -2px;
+					}
+				}
+			}
+			li:first-child{
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+
+.header-left.scrolled{
+	background: #fff;
+  
+}
